@@ -11,7 +11,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using VIKomet.SDK.Framework;
+using VIKomet.Framework.Common;
 
 namespace VIKomet.SDK.Clients
 {
@@ -52,7 +52,7 @@ namespace VIKomet.SDK.Clients
         //private BaseClient()
         //{
         //    //client = new HttpClient();
-        //    //client.BaseAddress = new Uri("http://localtest.me/");
+        //    //client.BaseAddress = new Uri("http://vikomet.com/");
 
         //    ////client.BaseAddress = new Uri("http://vikomet.com/");
         //    //// Add an Accept header for JSON format.

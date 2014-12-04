@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Xml.Serialization;
 using VIKomet.SDK.Entities.Catalog;
-using VIKomet.SDK.Framework; 
+using VIKomet.Framework.Common; 
 
 namespace VIKomet.SDK.Clients
 {

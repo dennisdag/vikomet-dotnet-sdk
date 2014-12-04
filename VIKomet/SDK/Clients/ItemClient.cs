@@ -1,5 +1,5 @@
 ﻿
-using VIKomet.SDK.Framework;
+using VIKomet.Framework.Common;
 using Glav.CacheAdapter.Core.DependencyInjection;
 using System;
 using System.Collections.Generic;

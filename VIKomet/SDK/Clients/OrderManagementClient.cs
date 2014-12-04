@@ -11,7 +11,7 @@ using VIKomet.SDK.Entities.WebStore.Checkout;
 using VIKomet.SDK.Entities.OrderManagement;
 using VIKomet.SDK.Entities.Settings;
 using System.Web;
-using VIKomet.SDK.Framework; 
+using VIKomet.Framework.Common; 
 
 namespace VIKomet.SDK.Clients
 {

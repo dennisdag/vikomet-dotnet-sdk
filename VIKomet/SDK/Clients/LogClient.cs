@@ -16,7 +16,7 @@ using VIKomet.SDK.Entities.Catalog;
 using VIKomet.SDK.Entities.Datastorage;
 using VIKomet.SDK.Entities.Messaging;
 using VIKomet.SDK.Entities.Messaging.Log;
-using VIKomet.SDK.Framework;
+using VIKomet.Framework.Common;
 
 namespace VIKomet.SDK.Clients
 {

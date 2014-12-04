@@ -30,6 +30,9 @@ namespace VIKomet.SDK.Entities.Datastorage
             return this.ExtendedProperties[key];
         }
 
+        [DataMember(Name = "Id")]
+        public string Id { get; set; }
+
         [DataMember(Name = "ItemId")]
         public string ItemId { get; set; }
 

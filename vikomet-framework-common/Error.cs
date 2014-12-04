@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VIKomet.SDK.Framework
+namespace VIKomet.Framework.Common
 {
     [DataContract]
     [Serializable]

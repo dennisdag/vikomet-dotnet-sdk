@@ -15,20 +15,11 @@ namespace VIKomet.SDK.Entities.Datastorage
 
     public class ItemSearch
     {
+        [DataMember(Name = "Id")]
         public string Id { get; set; }
 
         [DataMember(Name = "IDItemKey")]
-        public string IDItemKey
-        {   //Propriedade criada para o Id da heranca ficar no mesmo nivel no json
-            get
-            { return Id; }
-            set
-            {
-                Id = value;
-            }
-            //So mantem o Set, pq senao nao serializa para todos os tipos
-        }
-
+        public string IDItemKey { get; set; }
 
         [DataMember(Name = "AccountId")]  //Para o commerce, um accountId = accountId
         public string AccountId { get; set; }

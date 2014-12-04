@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using VIKomet.SDK.Entities.CMS;
 using VIKomet.SDK.Entities.Security;
 using VIKomet.SDK.Entities.UserManagement;
-using VIKomet.SDK.Framework;
+using VIKomet.Framework.Common;
 
 namespace VIKomet.SDK.Clients
 {
@@ -24,7 +24,7 @@ namespace VIKomet.SDK.Clients
             }
             else
             {
-                client.BaseAddress = new Uri("http://localtest.me/");
+                client.BaseAddress = new Uri("http://vikomet.com/");
             }
              
             //// Add an Accept header for JSON format.

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VIKomet.SDK.Framework
+namespace VIKomet.Framework.Common
 {
-
-    public class ValidationException : BaseException
+    public class IntegrationException : BaseException
     {
-        public ValidationException(string message, int code)
+        public IntegrationException(string message, int code)
             : base(message, code)
         {
 
