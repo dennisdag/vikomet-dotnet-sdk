@@ -103,9 +103,14 @@
     <Compile Include="Example-CacheAdapterUsage.cs" />
     <Compile Include="VIKomet\SDK\Clients\AccountClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\BaseClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\CatalogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\ConfigurationClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\FreightClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\LogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\MessagingClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\OrderManagementClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\PaymentClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\StockClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\WebStore\CatalogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\CMSClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\AuthorizationClient.cs" />
@@ -213,7 +218,7 @@
     <Compile Include="VIKomet\SDK\Framework\ValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\framework\framework\Framework.csproj">
+    <ProjectReference Include="..\framework\framework\Framework.csproj">
       <Project>{2480006e-8cf8-4c11-821d-bf0ec6708366}</Project>
       <Name>Framework</Name>
     </ProjectReference>

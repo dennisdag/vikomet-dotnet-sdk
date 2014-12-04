@@ -82,7 +82,7 @@ namespace VIKomet.SDK.Clients
             }
             else
             {
-                client.BaseAddress = new Uri("http://localtest.me/");
+                client.BaseAddress = new Uri("http://vikomet.com/");
             }
              
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
