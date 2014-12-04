@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CBCE126-E2A8-4562-AC28-13058E139D0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VIKomet</RootNamespace>
+    <AssemblyName>VIKomet.SDK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enyim.Caching">
+      <HintPath>packages\EnyimMemcached.2.11\lib\net35\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Glav.CacheAdapter">
+      <HintPath>packages\Glav.CacheAdapter.3.2.1\lib\Glav.CacheAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client">
+      <HintPath>packages\ServerAppFabric.Client.1.1.2106\lib\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core">
+      <HintPath>packages\ServerAppFabric.Client.1.1.2106\lib\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Example-CacheAdapterUsage.cs" />
+    <Compile Include="VIKomet\SDK\Clients\AccountClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\BaseClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\ConfigurationClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\LogClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\MessagingClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\WebStore\CatalogClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\CMSClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\AuthorizationClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\ItemClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\CustomerClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\WebStore\FreightClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\ItemTypeClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\WebStore\PaymentClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\WebStore\StockClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\WebStore\OrderManagementClient.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Account\NewInstance.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Common\ValueAndText.cs" />
+    <Compile Include="VIKomet\SDK\Entities\FileStorage\File.cs" />
+    <Compile Include="VIKomet\SDK\Entities\FileStorage\FileSearch.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Log.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\LogSearch.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Configuration.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Connectors\EmailConnector.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Connectors\HttpConnector.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Message.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\MessageGateway.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\QueueMessage.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\RecipientType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Subscriber.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Messaging\Messages\Subscription.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Security\Token.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Security\TokenRequest.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\AccessToken.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\Scope.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\Location.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\Checkout.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\CheckoutType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Datastorage\Item.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Datastorage\ItemSearch.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Datastorage\ItemType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Common\Location.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Common\Video.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\Address.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\LoginData.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\Category.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\Brand.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\Product.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\ProductSearch.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\ProductType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\SortCriteria.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Catalog\SortOrder.cs" />
+    <Compile Include="VIKomet\SDK\Entities\CMS\Category.cs" />
+    <Compile Include="VIKomet\SDK\Entities\CMS\Content.cs" />
+    <Compile Include="VIKomet\SDK\Entities\CMS\Menu.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Common\Image.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\ChangePasswordData.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\ResetPasswordData.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\PaymentData.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\PaymentMethod.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\Order.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\OrderLine.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\OrderStatus.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\OrderStatusFollowUp.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\PriceTag.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\Recurrence.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\RecurrenceLine.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\ShippingData.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\ShoppingCart.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\ShoppingCartLine.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\PaymentGateway\AntiFraud.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\PaymentGateway\CreditCard.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Payment\Payment.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Payment\PaymentStatus.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Cause.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Causes\CartHasSkuCause.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Causes\CartTotalCause.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\CauseType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Effect.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Effects\CartNominalDiscountEffect.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Effects\CartPercentageDiscountEffect.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Effects\LineNominalDiscountEffect.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Effects\LinePercentageDiscountEffect.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\EffectType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Promotion\Promotion.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Account\Settings.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Slug\Slug.cs" />
+    <Compile Include="VIKomet\SDK\Entities\Slug\SlugType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\Historico.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\Purchase.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\Reserve.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\SalesChannel.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\Stock.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Stock\StockType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\UserManagement\User.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\DeliveryType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\FreightRequest.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\FreightValue.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\ModalType.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\ProductData.cs" />
+    <Compile Include="VIKomet\SDK\Framework\BaseException.cs" />
+    <Compile Include="VIKomet\SDK\Framework\BusinessException.cs" />
+    <Compile Include="VIKomet\SDK\Framework\Error.cs" />
+    <Compile Include="VIKomet\SDK\Framework\LinkParentKeyValue.cs" />
+    <Compile Include="VIKomet\SDK\Framework\PagedList.cs" />
+    <Compile Include="VIKomet\SDK\Framework\ParentKeyValue.cs" />
+    <Compile Include="VIKomet\SDK\Framework\PermissionDeniedException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIKomet\SDK\Clients\SettingsClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\SlugClient.cs" />
+    <Compile Include="VIKomet\SDK\Framework\ValidationException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\framework\framework\Framework.csproj">
+      <Project>{2480006e-8cf8-4c11-821d-bf0ec6708366}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CacheAdapter-ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
