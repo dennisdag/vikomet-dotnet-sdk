@@ -166,14 +166,14 @@ namespace VIKomet.SDK.Clients
 
         public PagedList<ProductSearch> Search(string q, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
-            return Search(null, null, q, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
+            return Search(null, null, q, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
         }
         public PagedList<ProductSearch> Search(string q, string ep, double? lat, double? lon, double? distance, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
-            return Search(null, null, null, q, ep, lat, lon, distance, sortCriteria, sortOrder, page, itemsPerPage);
+            return Search(null, null, q, ep, lat, lon, distance, sortCriteria, sortOrder, page, itemsPerPage);
         }
 
-        public PagedList<ProductSearch> Search(string categoryId, string brandId, string ownerId, string q, string ep, double? lat, double? lon, double? distance, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
+        public PagedList<ProductSearch> Search(string categoryId, string brandId , string q, string ep, double? lat, double? lon, double? distance, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
             string url = "api/webstore/catalog/search?z=";
 
@@ -191,12 +191,7 @@ namespace VIKomet.SDK.Clients
             {
                 url = url + "&brandId=" + HttpUtility.UrlEncode(brandId);
             }
-
-            if (!string.IsNullOrEmpty(ownerId))
-            {
-                url = url + "&ownerId=" + HttpUtility.UrlEncode(ownerId);
-            }
-
+ 
             if (!string.IsNullOrEmpty(ep))
             {
                 url = url + "&ep=" + HttpUtility.UrlEncode(ep);
@@ -222,10 +217,7 @@ namespace VIKomet.SDK.Clients
                 url = url + "&brandId=" + HttpUtility.UrlEncode(brandId.ToString());
             }
 
-            if (!string.IsNullOrEmpty(ownerId))
-            {
-                url = url + "&ownerId=" + HttpUtility.UrlEncode(ownerId.ToString());
-            }
+            
             if (page != 0)
             {
                 url = url + "&page=" + page.ToString();
@@ -255,18 +247,44 @@ namespace VIKomet.SDK.Clients
         }
         public PagedList<ProductSearch> SearchByCategoryId(string categoryId, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
-            return Search(categoryId, null, null, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
+            return Search(categoryId, null, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
         }
 
         public PagedList<ProductSearch> SearchByBrandId(string brandId, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
-            return Search(null, brandId, null, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
+            return Search(null, brandId, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
 
         }
 
-        public PagedList<ProductSearch> SearchByProductOwnerId(string productOwnerId, SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
+        public PagedList<ProductSearch> SearchMyProducts(SortCriteria sortCriteria, SortOrder sortOrder, int page, int itemsPerPage)
         {
-            return Search(null, null, productOwnerId, null, null, null, null, null, sortCriteria, sortOrder, page, itemsPerPage);
+
+            string url = "api/webstore/catalog/product/searchmyproducts?z=";
+
+            if (page != 0)
+            {
+                url = url + "&page=" + page.ToString();
+            }
+
+            if (itemsPerPage != 0)
+            {
+                url = url + "&itemsPerPage=" + itemsPerPage.ToString();
+            }
+
+
+            //string approved = queryVars["approved"];
+
+            HttpResponseMessage response = client.GetAsync(url).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<PagedList<ProductSearch>>().Result;
+                return r;
+            }
+            else
+            {
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
         }
 
         public Product InsertProduct(Product product)
