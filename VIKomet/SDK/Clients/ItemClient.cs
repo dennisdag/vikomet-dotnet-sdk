@@ -78,6 +78,11 @@ namespace VIKomet.SDK.Clients
                 url = url + "&ep=" + HttpUtility.UrlEncode(ep);
             }
 
+            if (!string.IsNullOrEmpty(sortCriteria))
+            {
+                url = url + "&sortCriteria=" + HttpUtility.UrlEncode(sortCriteria);
+            }
+
             if (lat != null)
             {
                 url = url + "&lat=" + HttpUtility.UrlEncode(lat.ToString());
