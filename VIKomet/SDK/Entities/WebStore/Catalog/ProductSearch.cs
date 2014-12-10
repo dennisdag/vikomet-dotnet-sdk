@@ -7,8 +7,6 @@ using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
 using VIKomet.SDK.Entities.Common;
 
-
-
 namespace VIKomet.SDK.Entities.Catalog
 {
     [Serializable]
@@ -120,6 +118,21 @@ namespace VIKomet.SDK.Entities.Catalog
 
         [DataMember(Name = "SellerId")]
         public string SellerId { get; set; }
+
+        public object GetExtendedProperty(string key)
+        {
+            if ((this.ExtendedProperties == null) || (this.ExtendedProperties.Count == 0))
+            {
+                return null;
+            }
+
+            if (this.ExtendedProperties.ContainsKey(key) == false)
+            {
+                return null;
+            }
+
+            return this.ExtendedProperties[key];
+        }
 
     }
 }

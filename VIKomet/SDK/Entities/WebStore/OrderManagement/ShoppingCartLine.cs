@@ -30,6 +30,12 @@ namespace VIKomet.SDK.Entities.OrderManagement
         public string Name { get; set; }
 
         /// <summary>
+        /// Descrição da linha (preenchimento livre).
+        /// </summary>
+        [DataMember(Name = "Description")]
+        public string Description { get; set; }
+
+        /// <summary>
         /// Quantidade do sku.
         /// </summary>
         [DataMember(Name = "Quantity")]

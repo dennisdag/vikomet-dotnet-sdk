@@ -170,9 +170,9 @@ namespace VIKomet.SDK.Clients
 
         }
 
-        public void AddItemToShoppingCart(string cartId, string internalSkuId, int quantity, int recurrenceIntervalInDays, string ep)
+        public void AddItemToShoppingCart(string cartId, string internalSkuId, int quantity, int recurrenceIntervalInDays, string ep, string description)
         {
-            HttpResponseMessage response = client.GetAsync(string.Format("api/webstore/om/cart/add/{0}/{1}/{2}/{3}?ep={4}", cartId, internalSkuId, quantity, recurrenceIntervalInDays, HttpUtility.UrlEncode(ep))).Result;  // Blocking call!
+            HttpResponseMessage response = client.GetAsync(string.Format("api/webstore/om/cart/add/{0}/{1}/{2}/{3}?ep={4}&description={5}", cartId, internalSkuId, quantity, recurrenceIntervalInDays, HttpUtility.UrlEncode(ep), description)).Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!

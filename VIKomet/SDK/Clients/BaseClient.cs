@@ -78,11 +78,11 @@ namespace VIKomet.SDK.Clients
 
             if (isHTTPSCall)
             {
-                client.BaseAddress = new Uri("https://vikomet.com/");
+                client.BaseAddress = new Uri("http://localtest.me/");
             }
             else
             {
-                client.BaseAddress = new Uri("http://vikomet.com/");
+                client.BaseAddress = new Uri("http://localtest.me/");
             }
              
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

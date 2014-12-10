@@ -25,6 +25,11 @@ namespace VIKomet.SDK.Entities.OrderManagement
         public string Name { get; set; }
 
         /// <summary>
+        /// Descrição do item que a linha representa.
+        /// </summary>
+        public string Description { get; set; }
+
+        /// <summary>
         /// Quantidade do sku.
         /// </summary>
         public int Quantity { get; set; }
