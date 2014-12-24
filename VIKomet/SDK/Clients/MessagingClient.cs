@@ -34,6 +34,23 @@ namespace VIKomet.SDK.Clients
                 throw ErrorParser(response.Content.ReadAsStringAsync().Result);
             }
         }
+
+        public MessageGateway GetGatewayById(string id)
+        {
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/messagegateway/id/" + id).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<MessageGateway>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+
+        }
          
    }
 
