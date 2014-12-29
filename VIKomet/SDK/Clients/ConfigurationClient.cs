@@ -29,7 +29,7 @@ namespace VIKomet.SDK.Clients
 
         public Configuration GetConfigurationById(string id)
         {
-            HttpResponseMessage response = client.GetAsync("api/messaging/configuration/id/" + id).Result;  // Blocking call!
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/configuration/id/" + id).Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!

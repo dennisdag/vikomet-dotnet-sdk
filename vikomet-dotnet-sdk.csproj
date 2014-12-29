@@ -114,6 +114,7 @@
     <Compile Include="VIKomet\SDK\Clients\BaseClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\CatalogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\ConfigurationClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\SubscriptionClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\FreightClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\LogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\MessagingClient.cs" />
