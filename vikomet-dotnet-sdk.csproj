@@ -114,6 +114,7 @@
     <Compile Include="VIKomet\SDK\Clients\BaseClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\CatalogClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\ConfigurationClient.cs" />
+    <Compile Include="VIKomet\SDK\Clients\FreightTableClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\SubscriptionClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\FreightClient.cs" />
     <Compile Include="VIKomet\SDK\Clients\LogClient.cs" />
@@ -170,6 +171,8 @@
     <Compile Include="VIKomet\SDK\Entities\UserManagement\ResetPasswordData.cs" />
     <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\PaymentData.cs" />
     <Compile Include="VIKomet\SDK\Entities\WebStore\Checkout\PaymentMethod.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\FreightTable.cs" />
+    <Compile Include="VIKomet\SDK\Entities\WebStore\Freight\FreightTableValue.cs" />
     <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\Order.cs" />
     <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\OrderLine.cs" />
     <Compile Include="VIKomet\SDK\Entities\WebStore\OrderManagement\OrderStatus.cs" />
