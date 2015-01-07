@@ -287,12 +287,12 @@ namespace VIKomet.SDK.Clients
             }
         }
 
-        public Product InsertProduct(Product product)
+        public string InsertProduct(Product product)
         {
             var response = client.PostAsJsonAsync("api/webstore/catalog/product", product).Result;
             if (response.IsSuccessStatusCode)
             {
-                var r = response.Content.ReadAsAsync<Product>().Result;
+                var r = response.Content.ReadAsAsync<string>().Result;
                 return r;
             }
             else
