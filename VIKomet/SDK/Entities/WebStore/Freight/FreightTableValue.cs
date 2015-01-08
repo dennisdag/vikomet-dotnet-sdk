@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VI.Engine.Entity.Webstore.Freight
+namespace VIKomet.SDK.Entities.VIFrete
 {
     [Serializable]
     [DataContract]
@@ -64,12 +64,69 @@ namespace VI.Engine.Entity.Webstore.Freight
         /// </summary>
         [DataMember(Name = "ValueByWeight")]
         public decimal ValueByWeight { get; set; }
-        
+
         /// <summary>
         /// Tempo de entrega em dias.
         /// </summary>
         [DataMember(Name = "DeliveryTimeInDays")]
         public int DeliveryTimeInDays { get; set; }
 
+        [DataMember(Name = "CreateDate")]
+        public DateTime CreateDate { get; set; }
+
+        [DataMember(Name = "LastUpdate")]
+        public DateTime LastUpdate { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            var objectToCheck = (FreightTableValue)obj;
+
+            if (this.ItemId != objectToCheck.ItemId)
+            {
+                return false;
+            }
+            else if (this.DeliveryTimeInDays != objectToCheck.DeliveryTimeInDays)
+            {
+                return false;
+            }
+            else if (this.FreightTableId != objectToCheck.FreightTableId)
+            {
+                return false;
+            }
+            else if (this.MaxVolume != objectToCheck.MaxVolume)
+            {
+                return false;
+            }
+            else if (this.MaxWeight != objectToCheck.MaxWeight)
+            {
+                return false;
+            }
+            else if (this.MinWeight != objectToCheck.MinWeight)
+            {
+                return false;
+            }
+            else if (this.PostalCodeFrom != objectToCheck.PostalCodeFrom)
+            {
+                return false;
+            }
+            else if (this.PostalCodeTo != objectToCheck.PostalCodeTo)
+            {
+                return false;
+            }
+            else if (this.Value != objectToCheck.Value)
+            {
+                return false;
+            }
+            else if (this.ValueByPrice != objectToCheck.ValueByPrice)
+            {
+                return false;
+            }
+            else if (this.ValueByWeight != objectToCheck.ValueByWeight)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }
