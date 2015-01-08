@@ -29,5 +29,11 @@ namespace VIKomet.SDK.Entities.Datastorage
         [DataMember(Name = "Updateddate")]
         public DateTime Updateddate { get; set; }
 
+        /// <summary>
+        /// Forçar tipos de extended properties a definição do template.
+        /// </summary>
+        [DataMember(Name = "EnforceExtendedPropertiesTypes")]
+        public bool EnforceExtendedPropertiesTypes { get; set; }
+
     }
 }
