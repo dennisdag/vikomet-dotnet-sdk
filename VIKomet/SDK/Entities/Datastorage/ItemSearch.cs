@@ -62,7 +62,7 @@ namespace VIKomet.SDK.Entities.Datastorage
         public string Slug { get; set; }
 
         [DataMember(Name = "ExtendedProperties")]
-        public Dictionary<string, object> ExtendedProperties { get; set; }
+        public Dictionary<string, string> ExtendedProperties { get; set; }
 
    
         [DataMember(Name = "Location")]
