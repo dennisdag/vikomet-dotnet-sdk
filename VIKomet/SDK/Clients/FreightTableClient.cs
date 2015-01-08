@@ -45,5 +45,52 @@ namespace VIKomet.SDK.Clients
                 throw ErrorParser(response.Content.ReadAsStringAsync().Result);
             }
         }
+
+        public void InsertTableValue(FreightTableValue ftv)
+        {
+            var response = client.PostAsJsonAsync("api/webstore/freight/freighttable/createfreighttablevalue", ftv).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var r = response.Content.ReadAsAsync<FreightTableValue>().Result;
+                // return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+
+
+        public FreightTableValue UpdateFreightTableValue(FreightTableValue ftv)
+        {
+            var response = client.PostAsJsonAsync("api/webstore/freight/freighttable/createfreighttablevalue", ftv).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var r = response.Content.ReadAsAsync<FreightTableValue>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+
+        public List<FreightTableValue> GetAllFreightTableValueByTableId(string freightTableId)
+        {
+            HttpResponseMessage response = client.GetAsync("api/webstore/freight/freighttablevalue/" + freightTableId).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<List<FreightTableValue>>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+        }
     }
 }
