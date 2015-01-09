@@ -9,13 +9,19 @@ namespace VIKomet.Framework.Common
 
     public class PermissionDeniedException : BaseException
     {
+        public PermissionDeniedException(VIErrors error)
+            : this(error.ToReadableString(), (int)error)
+        {
+        }
+
         public PermissionDeniedException(string message, int code)
             : base(message, code)
         {
 
         }
 
-        public PermissionDeniedException() : base("PermissionDeniedException", 401)
+        public PermissionDeniedException()
+            : base("PermissionDeniedException", 401)
         {
         }
     }

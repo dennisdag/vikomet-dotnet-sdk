@@ -8,6 +8,10 @@ namespace VIKomet.Framework.Common
 {
     public class IntegrationException : BaseException
     {
+        public IntegrationException(VIErrors error)
+            : this(error.ToReadableString(), (int)error)
+        {
+        }
         public IntegrationException(string message, int code)
             : base(message, code)
         {
