@@ -145,13 +145,13 @@ namespace VIKomet.SDK.Clients
             }
         }
 
-        public int CountCategories()
+        public long CountCategories()
         {
             HttpResponseMessage response = client.GetAsync("api/cms/category/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else
@@ -161,13 +161,13 @@ namespace VIKomet.SDK.Clients
             }
         }
 
-        public int CountContents()
+        public long CountContents()
         {
             HttpResponseMessage response = client.GetAsync("api/cms/content/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else

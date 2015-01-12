@@ -368,13 +368,13 @@ namespace VIKomet.SDK.Clients
 
         }
 
-        public int CountBrands()
+        public long CountBrands()
         {
             HttpResponseMessage response = client.GetAsync("api/webstore/catalog/brand/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else
@@ -385,13 +385,13 @@ namespace VIKomet.SDK.Clients
 
         }
 
-        public int CountCollections()
+        public long CountCollections()
         {
             HttpResponseMessage response = client.GetAsync("api/webstore/catalog/collection/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else
@@ -402,13 +402,13 @@ namespace VIKomet.SDK.Clients
 
         }
 
-        public int CountBundles()
+        public long CountBundles()
         {
             HttpResponseMessage response = client.GetAsync("api/webstore/catalog/bundle/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else

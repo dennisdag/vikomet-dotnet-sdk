@@ -9,14 +9,14 @@ using VIKomet.Framework.Common;
 
 namespace VIKomet.SDK.Clients
 {
-    public class FreightTableClient : BaseClient
+    public class FreightConfigurationClient : BaseClient
     { 
 
-        public FreightTableClient(string access_token, string cacheString, bool isHTTPSCall) : base(access_token, cacheString, isHTTPSCall) { }
+        public FreightConfigurationClient(string access_token, string cacheString, bool isHTTPSCall) : base(access_token, cacheString, isHTTPSCall) { }
 
-        public long CountFreightTables()
+        public long CountFreightConfigurations()
         {
-            HttpResponseMessage response = client.GetAsync("api/webstore/freight/freighttable/quantity").Result;  // Blocking call!
+            HttpResponseMessage response = client.GetAsync("api/webstore/freight/freightconfiguration/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!

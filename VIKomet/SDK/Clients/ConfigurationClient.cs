@@ -77,13 +77,13 @@ namespace VIKomet.SDK.Clients
             }
         }
 
-        public int Count()
+        public long Count()
         {
             HttpResponseMessage response = client.GetAsync("api/messaging/log/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else

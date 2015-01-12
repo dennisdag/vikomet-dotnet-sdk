@@ -60,10 +60,10 @@ namespace VIKomet.SDK.Clients
         //    }
         //}
 
-        public int CountAPICalls(DateTime dateFrom)
+        public long CountAPICalls(DateTime dateFrom)
         {
             HttpResponseMessage response = client.GetAsync("api/settings/account/apicalls/quantity/" + dateFrom.ToString("yyyy-MM-dd")).Result;  // Blocking call!
-            return ValidateResponse<int>(response);
+            return ValidateResponse<long>(response);
         }
 
 

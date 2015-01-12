@@ -13,13 +13,13 @@ namespace VIKomet.SDK.Clients
 
         public ItemTypeClient(string access_token, string cacheString, bool isHTTPSCall) : base(access_token, cacheString, isHTTPSCall) { }
 
-        public int Count()
+        public long Count()
         {
             HttpResponseMessage response = client.GetAsync(string.Format("api/datastorage/itemtemplate/count/quantity")).Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else

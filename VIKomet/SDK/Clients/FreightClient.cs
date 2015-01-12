@@ -46,13 +46,13 @@ namespace VIKomet.SDK.Clients
             }
         }
 
-        public int CountFreightTables()
+        public long CountFreightTables()
         {
             HttpResponseMessage response = client.GetAsync("api/webstore/freight/freighttable/quantity").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var r = response.Content.ReadAsAsync<int>().Result;
+                var r = response.Content.ReadAsAsync<long>().Result;
                 return r;
             }
             else

@@ -14,10 +14,10 @@ namespace VIKomet.SDK.Clients
 
         
 
-        public int CountUsers(DateTime dateFrom)
+        public long CountUsers(DateTime dateFrom)
         {
             HttpResponseMessage response = client.GetAsync("api/usersandpermissions/user/quantity/" + dateFrom.ToString("yyyy-MM-dd")).Result;  // Blocking call!
-            return ValidateResponse<int>(response);
+            return ValidateResponse<long>(response);
            
         }
 
