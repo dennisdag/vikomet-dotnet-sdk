@@ -20,6 +20,9 @@ namespace VIKomet.SDK.Entities.VIFrete
         [DataMember(Name = "CarrierId")]
         public string CarrierId { get; set; }
 
+        [DataMember(Name = "Name")]
+        public string Name { get; set; }
+
         [DataMember(Name = "Private")]
         public bool Private { get; set; }
 
