@@ -153,6 +153,22 @@ namespace VIKomet.SDK.Clients
             }
         }
 
+        public void AddItemToShoppingCart(string cartId, string internalSkuId, int quantity, string ep, string description)
+        {
+            HttpResponseMessage response = client.GetAsync(string.Format("api/webstore/om/cart/add/{0}/{1}/{2}?ep={3}&description={4}", cartId, internalSkuId, quantity, ep, description)).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<ShoppingCart>().Result;
+                // return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+
         public void AddItemToShoppingCart(string cartId, string internalSkuId, int quantity, int recurrenceIntervalInDays)
         {
             HttpResponseMessage response = client.GetAsync(string.Format("api/webstore/om/cart/add/{0}/{1}/{2}/{3}", cartId, internalSkuId, quantity, recurrenceIntervalInDays)).Result;  // Blocking call!
