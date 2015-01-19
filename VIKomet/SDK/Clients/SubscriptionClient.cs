@@ -44,23 +44,24 @@ namespace VIKomet.SDK.Clients
 
         }
 
-       
 
-        //public int Count()
-        //{
-        //    HttpResponseMessage response = client.GetAsync("api/messaging/log/quantity").Result;  // Blocking call!
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        // Parse the response body. Blocking!
-        //        var r = response.Content.ReadAsAsync<int>().Result;
-        //        return r;
-        //    }
-        //    else
-        //    {
 
-        //        throw ErrorParser(response.Content.ReadAsStringAsync().Result);
-        //    }
-        //}
+        public long SubscriptionsGetCount()
+        {
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/subscription/quantity").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<long>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+
+        }
     }
 
 }

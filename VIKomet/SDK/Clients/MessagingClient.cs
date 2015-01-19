@@ -51,7 +51,60 @@ namespace VIKomet.SDK.Clients
             }
 
         }
-         
-   }
+
+        #region Counts
+        public long ConfigurationGetCount()
+        {
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/configuration/quantity/").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<long>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+
+        }
+        public long GatewaysGetCount()
+        {
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/messagegateway/quantity/").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<long>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+
+        }
+
+        public long MessageGetCount()
+        {
+            HttpResponseMessage response = client.GetAsync("api/messaging/messages/message/quantity/").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                // Parse the response body. Blocking!
+                var r = response.Content.ReadAsAsync<long>().Result;
+                return r;
+            }
+            else
+            {
+
+                throw ErrorParser(response.Content.ReadAsStringAsync().Result);
+            }
+
+        }
+
+        
+        #endregion
+    }
 
 }

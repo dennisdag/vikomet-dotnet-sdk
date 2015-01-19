@@ -181,6 +181,15 @@ namespace VIKomet.Framework.Common
         ERRO_EXTENDED_PROPERTY_OBRIGATORIA_NAO_PREENCHIDA= 4066,
         [ReadableString("Extended property enviada não existe na definição do template do item.")]
         ERRO_EXTENDED_PROPERTY_NAO_EXISTE_NO_ITEMTYPE = 4067,
+        [ReadableString("Campo Document deve ser preenchido.")]
+        ERRO_CAMPO_DOCUMENT_VAZIO = 4068,
+        [ReadableString("Campo Modal deve ser preenchido.")]
+        ERRO_CAMPO_MODAL_VAZIO = 4069,
+        [ReadableString("Campo Integração deve ser preenchido.")]
+        ERRO_CAMPO_INTEGRACAO_VAZIO = 4070,
+        [ReadableString("Campo Tipo de Entrega deve ser preenchido.")]
+        ERRO_CAMPO_DELIVERYTYPE_VAZIO = 4071,
+        
         
         [ReadableStringAttribute("Um pagamento deve estar associado a uma conta de usuário do VI Komet.")]
         ERRO_AO_CRIAR_PAGAMENTO_SEM_CONTA_DE_USUARIO_DA_PLATAFORMA = 5001,
