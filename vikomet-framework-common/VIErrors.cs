@@ -269,6 +269,9 @@ namespace VIKomet.Framework.Common
         [ReadableString("Erro ao processar pagamento no Moip.")]
         ERRO_AO_PROCESSAR_PAGAMENTO_NO_MOIP = 5033,
 
+        [ReadableString("Erro ao processar recorrência.")]
+        ERRO_AO_PROCESSAR_RECORRENCIA = 5034,
+
         [ReadableStringAttribute("Erro desconhecido.")]
         ERRO_DESCONHECIDO = 5100
         

@@ -20,8 +20,17 @@ namespace VIKomet.SDK.Entities.Payment
         [DataMember]
         public string UserId { get; set; }
 
+        /// <summary>
+        /// /// Identificador do pedido relacionada ao pagamento.
+        /// </summary>
         [DataMember]
         public string OrderId { get; set; }
+        
+        /// <summary>
+        /// Identificador da recorrência relacionada ao pagamento.
+        /// </summary>
+        [DataMember]
+        public string RecurrenceId { get; set; }
 
         [DataMember]
         public decimal Value { get; set; }
@@ -33,13 +42,19 @@ namespace VIKomet.SDK.Entities.Payment
         /// Data de criação do pagamento
         /// </summary>
         [DataMember]
-        public DateTime Date { get; set; }
+        public DateTime CreateDate { get; set; }
 
         /// <summary>
         /// Data da última atualização do pagamento.
         /// </summary>
         [DataMember]
         public DateTime LastUpdate { get; set; }
+
+        /// <summary>
+        /// Id da integração que gerou o pagamento. Ex: MOIP, Paypal, etc.
+        /// </summary>
+        [DataMember]
+        public string IntegrationId;
 
         /// <summary>
         /// Id do pagamento, fornecido pelo gateway que processou o pagamento. Ex: MOIP, PagSeguro, etc.

@@ -12,33 +12,45 @@ namespace VIKomet.SDK.Entities.OrderManagement
     public class RecurrenceLine
     {
         /// <summary>
-        /// Intervalo da recorrência em dias. Ex: 30 em 30 dias, 60 em 60 dias, etc. Informação de domínio do usuário.
+        /// Id de integração com sistemas legado.
         /// </summary>
-        [DataMember(Name = "RecurrenceInterval")]
-        public int? RecurrenceInterval { get; set; }
+        public string IntegrationId { get; set; }
 
         /// <summary>
-        /// Quantidade de entregas ou ciclos da recorrência (assinatura) comprada. Informação de domínio do usuário.
+        /// SkuId do item que a linha representa, informado no cadastro.
         /// </summary>
-        [DataMember(Name = "RecurrenceBillingCycles")]
-        public long? RecurrenceBillingCycles { get; set; }
+        public string SkuId { get; set; }
+
+        /// <summary>
+        /// Nome do item que a linha representa.
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Descrição do item que a linha representa.
+        /// </summary>
+        public string Description { get; set; }
 
         /// <summary>
         /// Quantidade do sku.
         /// </summary>
-        [DataMember(Name = "Quantity")]
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Identificador do usuário.
+        /// Preço unitário.
         /// </summary>
-        [DataMember(Name = "UserId")]
-        public string UserId { get; set; }
+        public decimal UnitPrice { get; set; }
 
         /// <summary>
-        /// Data de criação da linha de recorrência.
+        /// Imagem a aparecer no carrinho.
         /// </summary>
-        [DataMember(Name = "CreationDate")]
-        public DateTime CreationDate { get; set; }
+        public string ImagePath { get; set; }
+
+        /// <summary>
+        /// Item's Extended Properties.
+        /// </summary>
+        public Dictionary<string, object> ExtendedProperties { get; set; }
+
     }
+
 }
