@@ -59,7 +59,7 @@ namespace VIKomet.SDK.Entities.OrderManagement
         /// Quantity of deliveries in the purchased recurrence.
         /// </summary>
         [DataMember]
-        public long RecurrenceBillingCycles { get; set; }
+        public long? RecurrenceBillingCycles { get; set; }
 
         /// <summary>
         /// 
