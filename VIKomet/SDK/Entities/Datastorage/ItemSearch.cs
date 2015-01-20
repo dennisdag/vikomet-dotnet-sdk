@@ -79,5 +79,19 @@ namespace VIKomet.SDK.Entities.Datastorage
         [DataMember(Name = "Owner")]
         public string Owner { get; set; }
 
+        public object GetExtendedProperty(string key)
+        {
+            if ((this.ExtendedProperties == null) || (this.ExtendedProperties.Count == 0))
+            {
+                return null;
+            }
+
+            if (this.ExtendedProperties.ContainsKey(key) == false)
+            {
+                return null;
+            }
+
+            return this.ExtendedProperties[key];
+        }
     }
 }

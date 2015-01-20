@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BaseException.cs" />
     <Compile Include="BusinessException.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="IntegrationException.cs" />
     <Compile Include="LinkParentKeyValue.cs" />
