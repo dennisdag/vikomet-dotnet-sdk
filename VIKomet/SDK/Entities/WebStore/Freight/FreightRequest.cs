@@ -14,8 +14,11 @@ namespace VIKomet.SDK.Entities.VIFrete
         [DataMember(Name = "ProductData")]
         public List<ProductData> Products { get; set; }
 
-        [DataMember(Name = "PostalCode")]
-        public long PostalCode { get; set; }
+        [DataMember(Name = "PostalCodeFrom")]
+        public long PostalCodeFrom { get; set; }
+
+        [DataMember(Name = "PostalCodeTo")]
+        public long PostalCodeTo { get; set; }
         
         public FreightRequest()
         {

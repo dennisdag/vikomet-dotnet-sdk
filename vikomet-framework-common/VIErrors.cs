@@ -189,6 +189,8 @@ namespace VIKomet.Framework.Common
         ERRO_CAMPO_INTEGRACAO_VAZIO = 4070,
         [ReadableString("Campo Tipo de Entrega deve ser preenchido.")]
         ERRO_CAMPO_DELIVERYTYPE_VAZIO = 4071,
+        [ReadableString("Cep de origem não informado no cálculo de frete.")]
+        ERRO_CEP_DE_ORIIGEM_NAO_INFORMADO = 4072,
         
         
         [ReadableStringAttribute("Um pagamento deve estar associado a uma conta de usuário do VI Komet.")]
