@@ -87,6 +87,9 @@ namespace VIKomet.SDK.Entities.OrderManagement
         [DataMember(Name = "OrderDate")]
         public DateTime OrderDate { get; set; }
 
+        [DataMember(Name = "ReturnUrl")]
+        public string ReturnUrl { get; set; }
+
         public Order()
         {
             this.Lines = new List<OrderLine>();
