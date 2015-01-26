@@ -33,19 +33,19 @@ namespace VIKomet.SDK.Entities.VIFrete
         /// Peso mínimo da faixa em gramas (inclusivo).
         /// </summary>
         [DataMember(Name = "MinWeight")]
-        public decimal MinWeight { get; set; }
+        public double MinWeight { get; set; }
 
         /// <summary>
         /// Peso máximo da faixa em gramas (exclusivo).
         /// </summary>
         [DataMember(Name = "MaxWeight")]
-        public decimal MaxWeight { get; set; }
+        public double MaxWeight { get; set; }
 
         /// <summary>
         /// Volume máximo da faixa em centímetros cúbicos (excusivo).
         /// </summary>
         [DataMember(Name = "MaxVolume")]
-        public decimal MaxVolume { get; set; }
+        public double MaxVolume { get; set; }
 
         /// <summary>
         /// Valor absoltuto do frete.

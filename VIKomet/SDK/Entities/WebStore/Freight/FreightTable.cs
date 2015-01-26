@@ -33,7 +33,7 @@ namespace VIKomet.SDK.Entities.VIFrete
         public DateTime DateTo { get; set; }
 
         [DataMember(Name = "CubedWeightFactor")]
-        public decimal CubedWeightFactor { get; set; }
+        public double CubedWeightFactor { get; set; }
 
         [DataMember(Name = "CreateDate")]
         public DateTime CreateDate { get; set; }
