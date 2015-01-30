@@ -19,5 +19,6 @@ namespace VIKomet.SDK.Entities.WebStore.Checkout
         public PaymentData PaymentData { get; set; }
         public int CheckoutType { get; set; }
         public AntiFraud AntiFraud { get; set; }
+        public bool SkipPaymentIntegration { get; set; }
     }
 }
