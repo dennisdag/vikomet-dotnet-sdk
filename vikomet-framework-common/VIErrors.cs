@@ -191,6 +191,12 @@ namespace VIKomet.Framework.Common
         ERRO_CAMPO_DELIVERYTYPE_VAZIO = 4071,
         [ReadableString("Cep de origem não informado no cálculo de frete.")]
         ERRO_CEP_DE_ORIIGEM_NAO_INFORMADO = 4072,
+
+        [ReadableStringAttribute("Template de item não encontrado ou inválido")]
+        ERRO_ITEMTYPE_NAO_ENCONTRADO = 4098,
+
+        [ReadableStringAttribute("Item não encontrado ou inválido")]
+        ERRO_ITEM_NAO_ENCONTRADO = 4099,
         
         
         [ReadableStringAttribute("Um pagamento deve estar associado a uma conta de usuário do VI Komet.")]
