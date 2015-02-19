@@ -41,8 +41,8 @@ namespace VIKomet.SDK.Clients
         
         public PagedList<ItemSearch> Search(string q, string ep, string itemTypeId, double lat, double lon, double distance, string sortCriteria, int page, int itemsPerPage, string fields)
         {
-            return Search(q, ep, itemTypeId, null, lat, lon, distance, sortCriteria, page, itemsPerPage, null, fields);
-
+            PagedList<ItemSearch> aaa = Search(q, ep, itemTypeId, null, lat, lon, distance, sortCriteria, page, itemsPerPage, null, fields);
+             return aaa;
         }
         public PagedList<ItemSearch> Search(string q, string ep, string itemTypeId, string ownerId, double? lat, double? lon, double? distance, string sortCriteria, int page, int itemsPerPage, string fields)
         {
@@ -82,20 +82,19 @@ namespace VIKomet.SDK.Clients
             {
                 url = url + "&sortCriteria=" + HttpUtility.UrlEncode(sortCriteria);
             }
-
             if (lat != null)
             {
-                url = url + "&lat=" + HttpUtility.UrlEncode(lat.ToString());
+                url = url + "&lat=" + HttpUtility.UrlEncode(lat.Value.ToString(new CultureInfo("en-US")));
             }
 
             if (lon != null)
             {
-                url = url + "&lon=" + HttpUtility.UrlEncode(lon.ToString());
+                url = url + "&lon=" + HttpUtility.UrlEncode(lon.Value.ToString(new CultureInfo("en-US")));
             }
 
             if (distance != null)
             {
-                url = url + "&distance=" + HttpUtility.UrlEncode(distance.ToString());
+                url = url + "&distance=" + HttpUtility.UrlEncode(distance.Value.ToString(new CultureInfo("en-US")));
             }
              
             if (page != 0)
