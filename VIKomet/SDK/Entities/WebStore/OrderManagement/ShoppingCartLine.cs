@@ -127,6 +127,7 @@ namespace VIKomet.SDK.Entities.OrderManagement
         public ShoppingCartLine()
         {
             this.PriceTags = new List<PriceTag>();
+            this.ExtendedProperties = new Dictionary<string, object>();
         }
 
      }

@@ -97,9 +97,8 @@ namespace VIKomet.SDK.Entities.OrderManagement
             this.Reserves = new List<Reserve>();
             this.Purchases = new List<Purchase>();
             this.PriceTags = new List<PriceTag>();
+            this.ExtendedProperties = new Dictionary<string, object>();
         }
-
-
         
     }
 }
